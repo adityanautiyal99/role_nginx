@@ -1,0 +1,6 @@
+- name: copy the nginx config file
+  copy:
+    src: static_site.cfg
+    dest: /etc/nginx/sites-available/
+  become: yes
+

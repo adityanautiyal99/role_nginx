@@ -1,0 +1,8 @@
+- hosts: all
+  become: true
+  roles:
+    - install
+    - configure
+    - server
+    - web_server
+    - service

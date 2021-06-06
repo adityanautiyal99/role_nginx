@@ -1,0 +1,4 @@
+- name: copy the content of the web site
+  copy:
+    src: static-site-src/
+    dest: /usr/share/nginx/html/
