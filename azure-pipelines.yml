@@ -1,0 +1,19 @@
+# Ansible-pipeline
+
+trigger:
+- main
+
+pool:
+  name: 'My-Self'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo installing and configuring nginx on the server mentioned on ansible hosts file.
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'agentMachine'
+    playbookPathOnAgentMachine: 'nginx.yaml'
+    inventoriesAgentMachine: 'noInventory'
